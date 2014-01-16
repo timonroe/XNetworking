@@ -26,6 +26,10 @@
 		740600AB1881ED9D007F0EE1 /* DownloadFileOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 740600A61881ED9D007F0EE1 /* DownloadFileOperation.m */; };
 		740600AC1881ED9D007F0EE1 /* FetchJSONOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 740600A81881ED9D007F0EE1 /* FetchJSONOperation.m */; };
 		740600AD1881ED9D007F0EE1 /* NetworkInvocationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 740600A91881ED9D007F0EE1 /* NetworkInvocationOperation.m */; };
+		74B98A1E1888A5AB005FE89F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74B98A1B1888A5AB005FE89F /* README.md */; };
+		74B98A1F1888A5AB005FE89F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 74B98A1C1888A5AB005FE89F /* LICENSE */; };
+		74B98A201888A5AB005FE89F /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 74B98A1D1888A5AB005FE89F /* CHANGELOG.md */; };
+		74B98A221888A66C005FE89F /* XNetworking.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 74B98A211888A66B005FE89F /* XNetworking.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		740600A81881ED9D007F0EE1 /* FetchJSONOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchJSONOperation.m; sourceTree = "<group>"; };
 		740600A91881ED9D007F0EE1 /* NetworkInvocationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInvocationOperation.m; sourceTree = "<group>"; };
 		740600AA1881ED9D007F0EE1 /* FetchJSONOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchJSONOperation.h; sourceTree = "<group>"; };
+		74B98A1B1888A5AB005FE89F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		74B98A1C1888A5AB005FE89F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		74B98A1D1888A5AB005FE89F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		74B98A211888A66B005FE89F /* XNetworking.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = XNetworking.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,10 @@
 		740600491881DB90007F0EE1 = {
 			isa = PBXGroup;
 			children = (
+				74B98A211888A66B005FE89F /* XNetworking.podspec */,
+				74B98A1B1888A5AB005FE89F /* README.md */,
+				74B98A1D1888A5AB005FE89F /* CHANGELOG.md */,
+				74B98A1C1888A5AB005FE89F /* LICENSE */,
 				7406005B1881DB90007F0EE1 /* XNetworking */,
 				7406008D1881EB15007F0EE1 /* Demo */,
 				7406007D1881DB90007F0EE1 /* XNetworkingTests */,
@@ -255,8 +267,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74B98A1E1888A5AB005FE89F /* README.md in Resources */,
 				7406009E1881EB15007F0EE1 /* Main_iPhone.storyboard in Resources */,
 				740600A31881EB15007F0EE1 /* XNetworking-Info.plist in Resources */,
+				74B98A201888A5AB005FE89F /* CHANGELOG.md in Resources */,
+				74B98A1F1888A5AB005FE89F /* LICENSE in Resources */,
+				74B98A221888A66C005FE89F /* XNetworking.podspec in Resources */,
 				740600A01881EB15007F0EE1 /* Images.xcassets in Resources */,
 				7406009F1881EB15007F0EE1 /* InfoPlist.strings in Resources */,
 				7406009D1881EB15007F0EE1 /* Main_iPad.storyboard in Resources */,
