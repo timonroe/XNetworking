@@ -88,22 +88,28 @@ NSString* kXNetworking_DownloadTaskSessionIdentifierPrefix = @"XNetworkingDownlo
         [self setSrcDirectoryURL:srcDirectoryURL srcFileName:downloadFileName userName:userName password:password];
         
         // Get the download directory
-        NSArray* myPathList = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-        NSString* myCachePath = [myPathList objectAtIndex:0];
+        NSArray* pathList = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+        NSString* cacheDirectory = [pathList objectAtIndex:0];
         NSString* bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
-        _downloadDirectory = [myCachePath stringByAppendingPathComponent:bundleIdentifier];
+        _downloadDirectory = [cacheDirectory stringByAppendingPathComponent:bundleIdentifier];
         if (!_downloadDirectory) return Nil;
         _downloadDirectoryURL = [NSURL fileURLWithPath:_downloadDirectory];
         if (!_downloadDirectoryURL) return Nil;
         
-        // Build the identifier
+        // Create it if it doesn't exist
+        NSError* error = nil;
+        NSFileManager* fileManager = [NSFileManager defaultManager];
+        BOOL success = [fileManager createDirectoryAtPath:_downloadDirectory withIntermediateDirectories:YES attributes:Nil error:&error];
+        if (!success) return Nil;
+       
+        // Build the identifier used on the Config object
         // Note: this string needs to be unique
         NSString* identifier = kXNetworking_DownloadTaskSessionIdentifierPrefix;
         identifier = [identifier stringByAppendingString:downloadFileName];
         identifier = [identifier stringByAppendingString:@"_"];
         identifier = [identifier stringByAppendingString:[NSDate date].description];
         NSUInteger number = random();
-        NSString* randomNumber = [NSString stringWithFormat:@"%lu", number];
+        NSString* randomNumber = [NSString stringWithFormat:@"%lu", (unsigned long)number];
         identifier = [identifier stringByAppendingString:@"_"];
         identifier = [identifier stringByAppendingString:randomNumber];
         
